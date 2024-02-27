@@ -1,1 +1,63 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <style>
+        *{margin: 0;padding: 0; box-sizing: border-box;}
+        li{list-style: none;}
+        a{text-decoration: none;color: inherit;}
+        .box1{background-color: #fc6;}
+        .box1{font-size: 10px;}
+        .box1 ul li{background: tomato; width: 200px;padding: 10px; display: inline-block; font-size: 16px;}
+    </style>
+    <style>
+        .box2{background-color: #369;}
+        .box2{font-size: 10px;}
+        .box2 a{background: green; width: 200px;padding: 10px;display: inline-block;font-size: 16px;}
+    </style>
+    <style>
+        .box3{background-color: yellow; padding:  10px;}
+        .box3{font-size: 10px;}
+        .box3 p{background: tomato; width: 200px;padding: 10px; display: none;}
+        .box3:hover p{display: inline-block;font-size: 16px;}
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <ul>
+            <li>블록요소태그</li>
+            <li>블록요소태그</li>
+            <li>블록요소태그</li>
+            <li>블록요소태그</li>
+            <li>블록요소태그</li>
+            <li>블록요소태그</li>
+            <li>블록요소태그</li>
+            <li>블록요소태그</li>
+        </ul>
+    </div>
+    <div class="box2">
+        <ul>
+            <a href="#">인라인요소태그</a>
+            <a href="#">인라인요소태그</a>
+            <a href="#">인라인요소태그</a>
+            <a href="#">인라인요소태그</a>
+            <a href="#">인라인요소태그</a>
+            <a href="#">인라인요소태그</a>
+            <a href="#">인라인요소태그</a>
+            <a href="#">인라인요소태그</a>
+        </ul>
+    </div>
+    <div class="box3">
+        <p>display : none</p>
+        <p>display : none</p>
+        <p>display : none</p>
+        <p>display : none</p>
+        <p>display : none</p>
+        <p>display : none</p>
+        <p>display : none</p>
+        <p>display : none</p>
+    </div>
+</body>
+</html>
