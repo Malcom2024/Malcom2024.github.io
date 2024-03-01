@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main</title>
+    <title>Object_Study</title>
     <style>
-        div[class^="box"]{width: 150px;height: 80px;background: lightblue;transition: transform 2s;}
+        *{font-family: 'Courier New', Courier, monospace;}
+        div[class^="box"]{width: 100px;height: 100px;background: lightblue;transition: transform 1s;}
+        .box11{width: 100px; height: 100px;background: lightcoral;border-radius: 20px;}
+        .box12{position:relative;width: 100px; height: 100px;background: lightblue;top: 0;left: 0;border-radius: 50px;}
+        .box13{position:relative;width: 100px; height: 100px;background: lightblue;top: 0;left: 0;border-radius: 30px;}
+        .box14{position:relative;width: 100px; height: 100px;background: lightblue;top: 0;left: 0;border-radius: 40px;}
+        .box15{position:relative;width: 100px; height: 100px;background: lightblue;top: 0;left: 0;border-radius: 50px;}
     </style>
 </head>
 <body>
-    
     <h2> 크기변형 scale</h2>
     <div class="box1"></div>
     <style>
@@ -18,7 +23,7 @@
     <h2> 위치변형 translate</h2>
     <div class="box2"></div>
     <style>
-        .box2:hover{transform: translateX(200px);}
+        .box2:hover{transform: translateX(20px);}
     </style>
     <h2> 회전변형 rotate</h2>
     <div class="box3"></div>
@@ -35,17 +40,99 @@
     <div class="trans_origin">
         <h2> Transform-origin</h2>
         <section><div class="box01">가운데 기준</div></section>
+        <br>
         <section><div class="box02">상단 기준</div></section>
+        <br>
         <section><div class="box03">하단 기준</div></section>
     </div>
     <style>
         .trans_origin .box01{transform-origin: center;}
         .trans_origin .box01:hover{transform: scaleX(1.5);}
-        .trans_origin .box02{transform-origin: top right;}
-        .trans_origin .box02:hover{transform: rotate(20deg);}
-        .trans_origin .box03{transform-origin: bottom right;}
+        .trans_origin .box02{transform-origin: top left;}
+        .trans_origin .box02:hover{transform: rotate(-20deg);}
+        .trans_origin .box03{transform-origin: bottom left;}
         .trans_origin .box03:hover{transform: rotate(-20deg);}
     </style>
+    <h2>색상이 사라지는 애니메이션</h2>
+    <div class="box11"></div>
+    <br>
+    <h2>위치가 바뀌는 애니메이션 - 시계방향</h2>
+    <div class="box12"></div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2>위치가 바뀌는 애니메이션 - 방향전환</h2>
+    <div class="box13"></div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2>위치가 바뀌는 애니메이션-비스듬1</h2>
+    <div class="box14"></div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2>위치가 바뀌는 애니메이션-비스듬2</h2>
+    <div class="box15"></div>
 
+    <style>
+        .box11{animation: ani1;animation-duration: 3s;animation-iteration-count: infinite;}
+        @keyframes ani1{
+            from{background: lightcoral;}
+            to{background:  white;}
+        }
+        .box12{animation: ani2;animation-duration: 3s;animation-iteration-count: infinite;animation-delay: 0.5s;}
+        @keyframes ani2{
+            0%{background:lightblue;top: 0;left: 0;}
+            25%{background: lightgray;top: 0;left: 100px;}
+            50%{background:lightpink;top: 100px;left: 100px;}
+            75%{background: lightgrey;top: 100px;left: 0px;}
+            100%{background: lightblue;top: 0;left: 0;}
+        }
+        .box13{animation: ani3;animation-duration: 3s;animation-iteration-count: infinite;animation-delay: 0.5s;animation-direction: alternate;}
+        @keyframes ani3{
+            0%{background:lightblue;top: 0;left: 0;}
+            25%{background: lightgray;top: 100px;left: 0px;}
+            50%{background: lightpink;top: 100px;left: 100px;}
+            75%{background: lightcoral;top: 0px;left: 100px;}
+            100%{background: lightblue;top: 0;left: 0;}
+        }
+        .box14{animation: ani4;animation-duration: 3s;animation-iteration-count: infinite;animation-delay: 0.5s;animation-direction: reverse;}
+        @keyframes ani4{
+            0%{background:lightblue;top: 0;left: 0;}
+            25%{background: lightgray;top: 0;left: 100px;}
+            50%{background:lightpink;top: 100px;left: 200px;}
+            75%{background: lightgrey;top: 100px;left: 100px;}
+            100%{background: lightblue;top: 0;left: 0;}
+        }
+        .box15{animation: ani5;animation-duration: 3s;animation-iteration-count: infinite;animation-delay: 0.5s;animation-direction: reverse;}
+        @keyframes ani5{
+            0%{background:lightblue;top: 0;left: 0;}
+            25%{background: lightgray;top: 60px;left: 60px;}
+            50%{background: lightpink;top: 60px;left: 200px;}
+            75%{background: lightcoral;top: 0px;left: 140px;}
+            100%{background: lightblue;top: 0;left: 0;}
+        }
+    </style>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+    <div class="XXX">
+        <img src="/img/ballon.png">
+        <p>풍선</p>
+    </div>
+    <style>
+        .XXX{position: relative;display: inline-block;}
+        .XXX p{padding: 10px;color: #fff; background: rgb(0,0,0,0.5);
+            position: absolute; top: 50%; left: 50%;margin: 0;transform: translate(-50%,-50%);}
+    </style>
 </body>
 </html>
