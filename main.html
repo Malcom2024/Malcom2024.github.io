@@ -6,7 +6,7 @@
     <title>Object_Study</title>
     <style>
         *{font-family: 'Courier New', Courier, monospace;}
-        div[class^="box"]{width: 100px;height: 100px;background: lightblue;transition: transform 1s;}
+        div[class^="box"]{width: 100px;height: 100px;transition: transform 1s;}
         .box11{width: 100px; height: 100px;background: lightcoral;border-radius: 20px;}
         .box12{position:relative;width: 100px; height: 100px;background: lightblue;top: 0;left: 0;border-radius: 50px;}
         .box13{position:relative;width: 100px; height: 100px;background: lightblue;top: 0;left: 0;border-radius: 30px;}
@@ -18,23 +18,28 @@
     <h2> 크기변형 scale</h2>
     <div class="box1">Touch me</div>
     <style>
+        .box1{background-color: lightpink;}
         .box1:hover{transform: scale(1.5);}
     </style>
     <h2> 위치변형 translate</h2>
     <div class="box2">Touch me</div>
     <style>
-        .box2:hover{transform: translateX(20px);}
+        .box2{background-color: lightcoral;}
+        .box2:hover{transform: translate(20px);}
     </style>
     <h2> 회전변형 rotate</h2>
     <div class="box3">Touch me</div>
     <style>
+        .box3{background-color: lightgreen;}
         .box3:hover{transform: rotate(-180deg);}
     </style>
     <h2> 왜곡변형 skew</h2>
     <div class="box4">Touch me</div><br><br>
     <div class="box4-1">Touch me</div>
     <style>
+        .box4{background-color: lightslategray;}
         .box4:hover{transform: skewX(50deg);}
+        .box4-1{background-color: lightsteelblue;}
         .box4-1.box4-1:hover{transform: skewY(-40deg);}
     </style>
     <div class="trans_origin">
@@ -46,6 +51,9 @@
         <section><div class="box03">Touch me</div></section>
     </div>
     <style>
+        .box01{background-color: peachpuff;}
+        .box02{background-color: peachpuff;}
+        .box03{background-color: peachpuff;}
         .trans_origin .box01{transform-origin: center;}
         .trans_origin .box01:hover{transform: scaleX(1.5);}
         .trans_origin .box02{transform-origin: top left;}
@@ -119,5 +127,20 @@
             100%{background: lightblue;top: 0;left: 0;}
         }
     </style>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+    <!-- <div class="XXX">
+        <img src="/img/ballon.png">
+        <p>풍선</p>
+    </div>
+    <style>
+        .XXX{position: relative;display: inline-block;}
+        .XXX p{padding: 10px;color: #fff; background: rgb(0,0,0,0.5);
+            position: absolute; top: 50%; left: 50%;margin: 0;transform: translate(-50%,-50%);}
+    </style> -->
 </body>
 </html>
