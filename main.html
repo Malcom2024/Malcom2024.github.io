@@ -25,13 +25,13 @@
     <div class="box2">Touch me</div>
     <style>
         .box2{background-color: lightcoral;}
-        .box2:hover{transform: translate(20px);}
+        .box2:hover{transform: translate(30px);}
     </style>
     <h2> 회전변형 rotate</h2>
     <div class="box3">Touch me</div>
     <style>
         .box3{background-color: lightgreen;}
-        .box3:hover{transform: rotate(-180deg);}
+        .box3:hover{transform: rotate(-180deg)}
     </style>
     <h2> 왜곡변형 skew</h2>
     <div class="box4">Touch me</div><br><br>
@@ -57,9 +57,9 @@
         .trans_origin .box01{transform-origin: center;}
         .trans_origin .box01:hover{transform: scaleX(1.5);}
         .trans_origin .box02{transform-origin: top left;}
-        .trans_origin .box02:hover{transform: rotate(-20deg);}
+        .trans_origin .box02:hover{transform: rotate(-25deg);}
         .trans_origin .box03{transform-origin: bottom left;}
-        .trans_origin .box03:hover{transform: rotate(-20deg);}
+        .trans_origin .box03:hover{transform: rotate(-25deg);}
     </style>
     <h2>Disappear 색상이 사라지는 애니메이션</h2>
     <div class="box11"></div>
@@ -92,13 +92,14 @@
         .box11{animation: ani1;animation-duration: 3s;animation-iteration-count: infinite;}
         @keyframes ani1{
             from{background: lightcoral;}
-            to{background:  white;}
+            to{background:  white;transform: scale(1.5);}
+        
         }
         .box12{animation: ani2;animation-duration: 3s;animation-iteration-count: infinite;animation-delay: 0.5s;}
         @keyframes ani2{
             0%{background:lightblue;top: 0;left: 0;}
             25%{background: lightgray;top: 0;left: 100px;}
-            50%{background:lightpink;top: 100px;left: 100px;}
+            50%{background:lightpink;top: 100px;left: 100px;transform: scale(1.5);}
             75%{background: lightgrey;top: 100px;left: 0px;}
             100%{background: lightblue;top: 0;left: 0;}
         }
@@ -106,7 +107,7 @@
         @keyframes ani3{
             0%{background:lightblue;top: 0;left: 0;}
             25%{background: lightgray;top: 100px;left: 0px;}
-            50%{background: lightpink;top: 100px;left: 100px;}
+            50%{background: lightpink;top: 100px;left: 100px;transform: scale(1.5);}
             75%{background: lightcoral;top: 0px;left: 100px;}
             100%{background: lightblue;top: 0;left: 0;}
         }
