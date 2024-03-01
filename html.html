@@ -3,61 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Display</title>
+    <title>Transform</title>
     <style>
-        *{margin: 0;padding: 0; box-sizing: border-box;}
-        li{list-style: none;}
-        a{text-decoration: none;color: inherit;}
-        .box1{background-color: #fc6;}
-        .box1{font-size: 10px;}
-        .box1 ul li{background: tomato; width: 200px;padding: 10px; display: inline-block; font-size: 16px;}
-    </style>
-    <style>
-        .box2{background-color: #369;}
-        .box2{font-size: 10px;}
-        .box2 a{background: green; width: 200px;padding: 10px;display: inline-block;font-size: 16px;}
-    </style>
-    <style>
-        .box3{background-color: yellow; padding:  10px;}
-        .box3{font-size: 10px;}
-        .box3 p{background: tomato; width: 200px;padding: 10px; display: none;}
-        .box3:hover p{display: inline-block;font-size: 16px;}
+        div[class^="box"]{width: 150px;height: 80px;background: lightblue;transition: transform 1s;}
     </style>
 </head>
 <body>
-    <div class="box1">
-        <ul>
-            <li>마음대로 움직이는 상자</li>
-            <li>마음대로 움직이는 상자</li>
-            <li>마음대로 움직이는 상자</li>
-            <li>마음대로 움직이는 상자</li>
-            <li>마음대로 움직이는 상자</li>
-            <li>마음대로 움직이는 상자</li>
-            <li>마음대로 움직이는 상자</li>
-            
-        </ul>
+    
+    <h2> 크기변형 scale</h2>
+    <div class="box1"></div>
+    <style>
+        .box1:hover{transform: scale(1.5);}
+    </style>
+    <h2> 위치변형 translate</h2>
+    <div class="box2"></div>
+    <style>
+        .box2:hover{transform: translateX(200px);}
+    </style>
+    <h2> 회전변형 rotate</h2>
+    <div class="box3"></div>
+    <style>
+        .box3:hover{transform: rotate(-180deg);}
+    </style>
+    <h2> 왜곡변형 skew</h2>
+    <div class="box4"></div><br><br>
+    <div class="box4-1"></div>
+    <style>
+        .box4:hover{transform: skewX(50deg);}
+        .box4-1.box4-1:hover{transform: skewY(-40deg);}
+    </style>
+    <div class="trans_origin">
+        <h2> Transform-origin</h2>
+        <section><div class="box01">가운데 기준</div></section>
+        <section><div class="box02">상단 기준</div></section>
+        <section><div class="box03">하단 기준</div></section>
     </div>
-    <div class="box2">
-        <ul>
-            <a href="#">인라인요소태그</a>
-            <a href="#">인라인요소태그</a>
-            <a href="#">인라인요소태그</a>
-            <a href="#">인라인요소태그</a>
-            <a href="#">인라인요소태그</a>
-            <a href="#">인라인요소태그</a>
-            <a href="#">인라인요소태그</a>
-            <a href="#">인라인요소태그</a>
-        </ul>
-    </div>
-    <div class="box3">
-        <p>display : none</p>
-        <p>display : none</p>
-        <p>display : none</p>
-        <p>display : none</p>
-        <p>display : none</p>
-        <p>display : none</p>
-        <p>display : none</p>
-        <p>display : none</p>
-    </div>
+    <style>
+        .trans_origin .box01{transform-origin: center;}
+        .trans_origin .box01:hover{transform: scaleX(1.5);}
+        .trans_origin .box02{transform-origin: top right;}
+        .trans_origin .box02:hover{transform: rotate(20deg);}
+        .trans_origin .box03{transform-origin: bottom right;}
+        .trans_origin .box03:hover{transform: rotate(-20deg);}
+    </style>
+
 </body>
 </html>
